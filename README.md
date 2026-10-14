@@ -49,7 +49,6 @@ To view or run this project locally, you only need:
 ```
 Portifolio/
 ├── index.html     # Main portfolio page
-├── profile.jpg    # Profile photo (original file; also embedded in index.html)
 ├── README.md      # Project documentation
 └── license.txt    # License (The Unlicense)
 ```
@@ -57,6 +56,12 @@ Portifolio/
 ### Contributors
 
 - **Kamanzi Shikiri Danny** - [@kamanzi-danny](https://github.com/kamanzi-danny) · [kamanzidanny5@gmail.com](mailto:kamanzidanny5@gmail.com) · [LinkedIn](https://www.linkedin.com/in/kamanzi-s-252880196/)
+
+## Collaborator
+
+| Full name | GitHub username | Profile | Role |
+|---|---|---|---|
+| Florence Umutoniwase | @Toniflo | https://github.com/Toniflo | Collaborator: adds the Education section on branch `feature/education-florence` |
 
 ## License
 
