@@ -26,6 +26,36 @@
     .timeline-dot { width: 14px; height: 14px; background: #38bdf8; border-radius: 50%; margin-left: -8px; margin-top: 5px; flex-shrink: 0; }
     .btn-accent { background: #38bdf8; color: #0b1120; font-weight: 600; }
     .btn-accent:hover { background: #7dd3fc; color: #0b1120; }
+    /* ===== EDUCATION – timeline styling ===== */
+    .edu-timeline { position: relative; padding-left: 2rem; }
+    .edu-timeline::before {
+      content: ""; position: absolute; left: 7px; top: .4rem; bottom: .4rem; width: 2px;
+      background: linear-gradient(var(--accent, #38bdf8), transparent);
+    }
+    .edu-item { position: relative; margin-bottom: 1.5rem; }
+    .edu-item:last-child { margin-bottom: 0; }
+    .edu-item::before {
+      content: ""; position: absolute; left: calc(-2rem + 1px); top: 1.4rem;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--accent, #38bdf8);
+      box-shadow: 0 0 0 5px rgba(56, 189, 248, .18);
+    }
+    .edu-year {
+      display: inline-block; font-size: .75rem; letter-spacing: .04em;
+      color: var(--accent, #38bdf8); border: 1px solid currentColor;
+      border-radius: 999px; padding: .1rem .65rem;
+    }
+    .edu-tag { background: rgba(148, 163, 184, .12); color: #cbd5e1; font-weight: 500; }
+    /* ===== EDUCATION – small screens + motion ===== */
+    @media (max-width: 575.98px) {
+      .edu-timeline { padding-left: 1.5rem; }
+      .edu-item::before { left: calc(-1.5rem + 1px); width: 12px; height: 12px; }
+      .edu-item .card-body { padding: .75rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .edu-item .card { transition: none; }
+      .edu-item .card:hover { transform: none; }
+    }
   </style>
 </head>
 <body>
@@ -41,7 +71,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <!-- Collaborator: add the Education nav link here -->
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -108,8 +138,38 @@
     </div>
   </section>
 
-  <!-- Collaborator: add the EDUCATION section here (branch feature/education-florence) -->
+<!-- EDUCATION -->
+  <section id="education" class="container py-5">
+    <h3 class="fw-bold text-white mb-4">Education &amp; Background</h3>
+    <div class="edu-timeline">
 
+      <div class="edu-item">
+        <div class="card p-3"><div class="card-body">
+          <span class="edu-year font-monospace">Feb 2026 – Present</span>
+          <h4 class="h5 text-white mt-2 mb-1">Saint Joseph Integrated Technical College (SJITC)</h4>
+          <p class="text-secondary mb-2">Bachelor of Technology, Faculty of Information Technology · Nyamirambo, Kigali</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill edu-tag px-3 py-2">Development Operations</span>
+            <span class="badge rounded-pill edu-tag px-3 py-2">Git &amp; GitHub</span>
+            <span class="badge rounded-pill edu-tag px-3 py-2">CI / CD</span>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="edu-item">
+        <div class="card p-3"><div class="card-body">
+          <span class="edu-year font-monospace">2016 – 2019</span>
+          <h4 class="h5 text-white mt-2 mb-1">RP IPRC Kigali</h4>
+          <p class="text-secondary mb-2">Advanced Diploma, Information Technology</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill edu-tag px-3 py-2">Databases</span>
+            <span class="badge rounded-pill edu-tag px-3 py-2">Networking</span>
+          </div>
+        </div></div>
+      </div>
+
+    </div>
+  </section>
   <!-- CERTIFICATIONS -->
   <section id="certifications" class="container py-5">
     <h3 class="fw-bold text-white mb-4">Licenses &amp; Certifications</h3>
