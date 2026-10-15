@@ -26,7 +26,6 @@
     .timeline-dot { width: 14px; height: 14px; background: #38bdf8; border-radius: 50%; margin-left: -8px; margin-top: 5px; flex-shrink: 0; }
     .btn-accent { background: #38bdf8; color: #0b1120; font-weight: 600; }
     .btn-accent:hover { background: #7dd3fc; color: #0b1120; }
-
     /* ===== EDUCATION – timeline styling ===== */
     .edu-timeline { position: relative; padding-left: 2rem; }
     .edu-timeline::before {
@@ -47,6 +46,16 @@
       border-radius: 999px; padding: .1rem .65rem;
     }
     .edu-tag { background: rgba(148, 163, 184, .12); color: #cbd5e1; font-weight: 500; }
+    /* ===== EDUCATION – small screens + motion ===== */
+    @media (max-width: 575.98px) {
+      .edu-timeline { padding-left: 1.5rem; }
+      .edu-item::before { left: calc(-1.5rem + 1px); width: 12px; height: 12px; }
+      .edu-item .card-body { padding: .75rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .edu-item .card { transition: none; }
+      .edu-item .card:hover { transform: none; }
+    }
   </style>
 </head>
 <body>
